@@ -10,13 +10,14 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nickQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scrollbarSize="8dp"
         android:text="Podaj swój nick"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -25,7 +26,7 @@
         app:layout_constraintVertical_bias="0.247" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/enterNickButton"
         android:layout_width="136dp"
         android:layout_height="72dp"
         android:layout_marginStart="158dp"
@@ -36,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/nickQuestion"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
@@ -51,9 +52,9 @@
         android:inputType="textPersonName"
         android:text="Nick"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/enterNickButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/nickQuestion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
