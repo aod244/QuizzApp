@@ -126,7 +126,7 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="250dp"
         android:layout_marginBottom="79dp"
-        android:text="Tu dla testu mial byc nick "
+        android:text="@string/nickName"
         app:layout_constraintBottom_toTopOf="@+id/questionName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
