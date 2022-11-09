@@ -23,29 +23,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/enterNickButton"
-        android:layout_width="136dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="410dp"
-        android:onClick="submitNick"
-        android:text="Rozpocznij!"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/enterNickText"
         android:layout_width="211dp"
         android:layout_height="61dp"
-        android:layout_marginBottom="92dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nick"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/enterNickButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nickQuestion" />
+
+    <Button
+        android:id="@+id/EnterGame"
+        android:layout_width="136dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="121dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterNickText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
