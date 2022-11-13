@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var nickName: EditText
@@ -22,7 +23,8 @@ class MainActivity : AppCompatActivity() {
 
 
         StartGame.setOnClickListener(){
-            setContentView(R.layout.activity_category)
+            setContentView(R.layout.activity_question)
+            println(nickName.text)
         }
 
     }
