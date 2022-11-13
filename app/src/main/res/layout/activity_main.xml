@@ -27,6 +27,7 @@
         android:id="@+id/enterNickText"
         android:layout_width="211dp"
         android:layout_height="61dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nick"
