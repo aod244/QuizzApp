@@ -14,7 +14,7 @@
         android:layout_marginTop="150dp"
         android:background="@color/teal_700"
         android:scrollbarSize="8dp"
-        android:text="Pytanie nr: x"
+        android:text="Pytanie nr:  / 5"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="24sp"

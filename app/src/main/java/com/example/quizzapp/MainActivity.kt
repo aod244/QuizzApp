@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
+
 class MainActivity : AppCompatActivity() {
 
     lateinit var nickName: EditText
@@ -32,7 +33,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent)
                 finish()
             }
-
         }
 
     }
