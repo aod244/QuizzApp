@@ -45,9 +45,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
                 else{
@@ -56,9 +54,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
 
@@ -71,9 +67,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
                 else{
@@ -82,9 +76,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
 
@@ -97,9 +89,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
                 else{
@@ -108,9 +98,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
 
@@ -123,9 +111,7 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
                     }
                 }
                 else{
@@ -134,9 +120,8 @@ class activity_question : AppCompatActivity() {
                         set_question()
                     }
                     else {
-                        val intent = Intent(this, activity_score::class.java)
-                        intent.putExtra("score",score)
-                        intent.putExtra("nick",mNickname)
+                        scoreActivity()
+
                     }
                 }
 
@@ -165,5 +150,11 @@ class activity_question : AppCompatActivity() {
         option3.text = question.optionThree
         option4.text = question.optionFour
 
+    }
+    private fun scoreActivity(){
+        val intent = Intent(this, activity_score::class.java)
+        intent.putExtra("score",score)
+        intent.putExtra("nick",mNickname)
+        startActivity(intent)
     }
 }
