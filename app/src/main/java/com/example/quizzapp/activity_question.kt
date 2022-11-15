@@ -15,7 +15,7 @@ class activity_question : AppCompatActivity() {
     private var mNickname: String? = null
     private var mQuestionsList: ArrayList<Question>? = null
     private var selectedOption: Int = 0
-    private var score: Int = 1
+    private var score: Int = 0
     val correctanswer = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
