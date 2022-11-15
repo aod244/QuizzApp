@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6495ED"
+    android:background="@drawable/background_gradient"
     tools:context=".activity_question">
 
     <TextView
@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
-        android:background="@color/teal_700"
         android:scrollbarSize="8dp"
         android:text="Pytanie nr:  / 5"
         android:textAlignment="center"
@@ -29,7 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
-        android:background="@color/teal_700"
         android:scrollbarSize="8dp"
         android:text="Tresc pytania"
         android:textAlignment="center"
@@ -52,7 +50,6 @@
         android:text="ODP 1"
         app:layout_constraintBottom_toTopOf="@+id/answerbutton2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question" />
 
@@ -117,21 +114,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answerbutton3" />
-
-    <TextView
-        android:id="@+id/showNickName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="250dp"
-        android:layout_marginBottom="79dp"
-        android:text="@string/nickName"
-        app:layout_constraintBottom_toTopOf="@+id/questionName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

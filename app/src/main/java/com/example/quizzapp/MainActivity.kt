@@ -13,7 +13,7 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var nickName: EditText
+
 
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,22 +22,19 @@ class MainActivity : AppCompatActivity() {
         var StartGame = findViewById<Button>(R.id.EnterGame)
         var PlayerNick = findViewById<TextView>(R.id.enterNickText)
 
-        nickName = findViewById(R.id.enterNickText)
+        val userName: String = "Nick"
 
 
         StartGame.setOnClickListener(){
             if(PlayerNick.text.toString().isEmpty()){
                 Toast.makeText(this, "Please enter you Nick", Toast.LENGTH_SHORT).show()
             }else{
-                val Intent = Intent(this, activity_category::class.java)
+                val Intent = Intent(this, activity_question::class.java)
+                intent.putExtra("PlayerNick", PlayerNick.text.toString())
                 startActivity(Intent)
                 finish()
             }
         }
-
-    }
-    fun submitNick (view: View?){
-        println(nickName.text)
 
     }
 }
