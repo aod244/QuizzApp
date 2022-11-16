@@ -15,7 +15,6 @@ class activity_question : AppCompatActivity() {
     private var mQuestionsList: ArrayList<Question>? = null
     private var selectedOption: Int = 0
     private var score: Int = 0
-    val correctanswer = 1
     var mNickname = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +27,7 @@ class activity_question : AppCompatActivity() {
             intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
 
+
         }
 
         mQuestionsList = QuestionDATA.getQuestions()
@@ -35,10 +35,15 @@ class activity_question : AppCompatActivity() {
         set_question()
     }
     fun onClick(v: View?) {
+        val question = mQuestionsList!!.get(mCurrentPosition - 1)
+        var correctanswer = 1
+
 
         when (v?.id) {
 
+
             R.id.answerbutton1 -> {
+                correctanswer = question.correctAnswer
                 if (correctanswer == 1){
                     score++
                     mCurrentPosition++
@@ -61,6 +66,7 @@ class activity_question : AppCompatActivity() {
 
             }
             R.id.answerbutton2 -> {
+                correctanswer = question.correctAnswer
                 if (correctanswer == 2){
                     score++
                     mCurrentPosition++
@@ -83,6 +89,7 @@ class activity_question : AppCompatActivity() {
 
             }
             R.id.answerbutton3 -> {
+                correctanswer = question.correctAnswer
                 if (correctanswer == 3){
                     score++
                     mCurrentPosition++
@@ -105,6 +112,7 @@ class activity_question : AppCompatActivity() {
 
             }
             R.id.answerbutton4 -> {
+                correctanswer = question.correctAnswer
                 if (correctanswer == 4){
                     score++
                     mCurrentPosition++
