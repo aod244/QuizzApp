@@ -8,11 +8,11 @@ class activity_score : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
-        val score = intent.getStringExtra("score").toString()
-        val nick = intent.getStringExtra("mNickname")
+        val score = intent.getStringExtra("wynik").toString()
+        val nick = intent.getStringExtra("nick").toString()
+        println(score)
+        println(nick)
         val shownick = findViewById<TextView>(R.id.textView2)
-        val showscore = findViewById<TextView>(R.id.textView3)
-        shownick.text = nick
-        showscore.text = score
+        shownick.text = "czesc $nick twoj wynik to $score"
     }
 }

@@ -12,16 +12,17 @@ import androidx.core.content.ContextCompat
 class activity_question : AppCompatActivity() {
 
     private var mCurrentPosition: Int = 1
-    private var mNickname: String? = null
     private var mQuestionsList: ArrayList<Question>? = null
     private var selectedOption: Int = 0
     private var score: Int = 0
     val correctanswer = 1
+    var mNickname = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
 
-        val mNickname = intent.getStringExtra("PlayerNick")
+
+        println(mNickname)
         val button2 = findViewById<Button>(R.id.exitButton)
         button2.setOnClickListener(){
             intent = Intent(this,MainActivity::class.java)
@@ -39,7 +40,7 @@ class activity_question : AppCompatActivity() {
 
             R.id.answerbutton1 -> {
                 if (correctanswer == 1){
-                    score = score + 1
+                    score++
                     mCurrentPosition++
                     if(mCurrentPosition <= mQuestionsList!!.size) {
                         set_question()
@@ -61,7 +62,7 @@ class activity_question : AppCompatActivity() {
             }
             R.id.answerbutton2 -> {
                 if (correctanswer == 2){
-                    score = score + 1
+                    score++
                     mCurrentPosition++
                     if(mCurrentPosition <= mQuestionsList!!.size) {
                         set_question()
@@ -83,7 +84,7 @@ class activity_question : AppCompatActivity() {
             }
             R.id.answerbutton3 -> {
                 if (correctanswer == 3){
-                    score = score + 1
+                    score++
                     mCurrentPosition++
                     if(mCurrentPosition <= mQuestionsList!!.size) {
                         set_question()
@@ -105,7 +106,7 @@ class activity_question : AppCompatActivity() {
             }
             R.id.answerbutton4 -> {
                 if (correctanswer == 4){
-                    score = score + 1
+                    score++
                     mCurrentPosition++
                     if(mCurrentPosition <= mQuestionsList!!.size) {
                         set_question()
@@ -142,19 +143,22 @@ class activity_question : AppCompatActivity() {
         val option3 = findViewById<TextView>(R.id.answerbutton3)
         val option4 = findViewById<TextView>(R.id.answerbutton4)
         val correctanswer = question.correctAnswer
-
+        mNickname = intent.getStringExtra("MSG").toString()
         questionName.text = "Pytanie "+"$mCurrentPosition/5"
         questionText.text = question.question
         option1.text = question.optionOne
         option2.text = question.optionTwo
         option3.text = question.optionThree
         option4.text = question.optionFour
+        println(mNickname)
+
 
     }
     private fun scoreActivity(){
-        val intent = Intent(this, activity_score::class.java)
-        intent.putExtra("score",score)
-        intent.putExtra("nick",mNickname)
-        startActivity(intent)
+        val Intent = Intent(this, activity_score::class.java)
+        val wynik: String = score.toString()
+        Intent.putExtra("wynik",wynik)
+        Intent.putExtra("nick",mNickname)
+        startActivity(Intent)
     }
 }

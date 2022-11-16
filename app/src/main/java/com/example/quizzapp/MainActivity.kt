@@ -22,15 +22,15 @@ class MainActivity : AppCompatActivity() {
         var StartGame = findViewById<Button>(R.id.EnterGame)
         var PlayerNick = findViewById<TextView>(R.id.enterNickText)
 
-        val userName: String = "Nick"
-
 
         StartGame.setOnClickListener(){
             if(PlayerNick.text.toString().isEmpty()){
                 Toast.makeText(this, "Please enter you Nick", Toast.LENGTH_SHORT).show()
             }else{
                 val Intent = Intent(this, activity_question::class.java)
-                intent.putExtra("PlayerNick", PlayerNick.text.toString())
+                val msg = PlayerNick.text.toString()
+                println(msg)
+                Intent.putExtra("MSG",msg)
                 startActivity(Intent)
                 finish()
             }
