@@ -150,7 +150,6 @@ class activity_question : AppCompatActivity() {
         val option2 = findViewById<TextView>(R.id.answerbutton2)
         val option3 = findViewById<TextView>(R.id.answerbutton3)
         val option4 = findViewById<TextView>(R.id.answerbutton4)
-        val correctanswer = question.correctAnswer
         mNickname = intent.getStringExtra("MSG").toString()
         questionName.text = "Pytanie "+"$mCurrentPosition/5"
         questionText.text = question.question

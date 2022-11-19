@@ -22,7 +22,7 @@ object QuestionDATA {
         val que3 = Question(2,"Co lubia jesc malpy?","Banana","Jablko","Marchew","Ziemniaka", 1)
         questionsList.add(que3)
 
-        val que4 = Question(3,"W jakim budynku mamy zajecia?","W A", "W B", "W G", "W H", 1)
+        val que4 = Question(3,"W jakim budynku mamy zajecia?","W A", "W B", "W G", "W H", 2)
         questionsList.add(que4)
 
         val que5 = Question(4, "Kto parkuje tramwaj na petli?", "Seweryn", "Filip", "Paweł", "Norbert", 4)
