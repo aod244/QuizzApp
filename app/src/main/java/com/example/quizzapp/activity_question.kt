@@ -18,6 +18,16 @@ class activity_question : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
+        val skip = findViewById<Button>(R.id.skipButton)
+        skip.setOnClickListener(){
+            mCurrentPosition++
+            if(mCurrentPosition <= mQuestionsList!!.size) {
+                set_question()
+            }
+            else {
+                scoreActivity()
+            }
+        }
 
 
 
@@ -26,8 +36,6 @@ class activity_question : AppCompatActivity() {
         button2.setOnClickListener(){
             intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
-
-
         }
 
         mQuestionsList = QuestionDATA.getQuestions()
