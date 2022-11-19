@@ -14,7 +14,7 @@ class activity_question : AppCompatActivity() {
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
     private var score: Int = 0
-    var mNickname = ""
+    private var mNickname = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
