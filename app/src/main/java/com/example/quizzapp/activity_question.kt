@@ -13,12 +13,12 @@ class activity_question : AppCompatActivity() {
 
     private var mCurrentPosition: Int = 1
     private var mQuestionsList: ArrayList<Question>? = null
-    private var selectedOption: Int = 0
     private var score: Int = 0
     var mNickname = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
+
 
 
         println(mNickname)
@@ -40,8 +40,6 @@ class activity_question : AppCompatActivity() {
 
 
         when (v?.id) {
-
-
             R.id.answerbutton1 -> {
                 correctanswer = question.correctAnswer
                 if (correctanswer == 1){
